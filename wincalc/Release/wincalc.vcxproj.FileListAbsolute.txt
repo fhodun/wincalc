@@ -1,0 +1,2 @@
+C:\Users\filip\source\repos\wincalc\wincalc\Release\wincalc.MyForm.resources
+C:\Users\filip\source\repos\wincalc\wincalc\Release\wincalc.vcxproj.GenerateResource.cache

@@ -1,0 +1,7 @@
+﻿  main.cpp
+C:\Users\filip\source\repos\wincalc\wincalc\main.cpp(1,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+  MyForm.cpp
+  .NETFramework,Version=v4.7.2.AssemblyAttributes.cpp
+  Generating Code...
+  main.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+  wincalc.vcxproj -> C:\Users\filip\source\repos\wincalc\Release\wincalc.exe
