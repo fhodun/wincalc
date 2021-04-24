@@ -54,6 +54,13 @@ namespace wincalc {
 	private: System::Windows::Forms::TextBox^ textBox1;
 	private: System::Windows::Forms::TextBox^ textBox2;
 	private: System::Windows::Forms::Button^ button17;
+	private: System::Windows::Forms::MenuStrip^ menuStrip1;
+	private: System::Windows::Forms::ToolStripMenuItem^ saveToFileToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ saveToFileToolStripMenuItem1;
+
+	private: System::Windows::Forms::ToolStripMenuItem^ enabledToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ locationToolStripMenuItem;
+	private: System::Windows::Forms::ToolStripMenuItem^ overwriteToolStripMenuItem;
 
 	private:
 		/// <summary>
@@ -87,13 +94,20 @@ namespace wincalc {
 			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
 			this->button17 = (gcnew System::Windows::Forms::Button());
+			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
+			this->saveToFileToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->saveToFileToolStripMenuItem1 = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->enabledToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->overwriteToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->locationToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button1->Location = System::Drawing::Point(78, 202);
+			this->button1->Location = System::Drawing::Point(78, 217);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(60, 40);
 			this->button1->TabIndex = 0;
@@ -105,7 +119,7 @@ namespace wincalc {
 			// 
 			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button2->Location = System::Drawing::Point(12, 156);
+			this->button2->Location = System::Drawing::Point(12, 171);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(60, 40);
 			this->button2->TabIndex = 1;
@@ -117,7 +131,7 @@ namespace wincalc {
 			// 
 			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button3->Location = System::Drawing::Point(78, 156);
+			this->button3->Location = System::Drawing::Point(78, 171);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(60, 40);
 			this->button3->TabIndex = 2;
@@ -129,7 +143,7 @@ namespace wincalc {
 			// 
 			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button4->Location = System::Drawing::Point(144, 156);
+			this->button4->Location = System::Drawing::Point(144, 171);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(60, 40);
 			this->button4->TabIndex = 3;
@@ -141,7 +155,7 @@ namespace wincalc {
 			// 
 			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button5->Location = System::Drawing::Point(12, 110);
+			this->button5->Location = System::Drawing::Point(12, 125);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(60, 40);
 			this->button5->TabIndex = 4;
@@ -153,7 +167,7 @@ namespace wincalc {
 			// 
 			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button6->Location = System::Drawing::Point(78, 110);
+			this->button6->Location = System::Drawing::Point(78, 125);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(60, 40);
 			this->button6->TabIndex = 5;
@@ -165,7 +179,7 @@ namespace wincalc {
 			// 
 			this->button7->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button7->Location = System::Drawing::Point(144, 110);
+			this->button7->Location = System::Drawing::Point(144, 125);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(60, 40);
 			this->button7->TabIndex = 6;
@@ -177,7 +191,7 @@ namespace wincalc {
 			// 
 			this->button8->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button8->Location = System::Drawing::Point(12, 64);
+			this->button8->Location = System::Drawing::Point(12, 79);
 			this->button8->Name = L"button8";
 			this->button8->Size = System::Drawing::Size(60, 40);
 			this->button8->TabIndex = 7;
@@ -189,7 +203,7 @@ namespace wincalc {
 			// 
 			this->button9->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button9->Location = System::Drawing::Point(78, 64);
+			this->button9->Location = System::Drawing::Point(78, 79);
 			this->button9->Name = L"button9";
 			this->button9->Size = System::Drawing::Size(60, 40);
 			this->button9->TabIndex = 8;
@@ -201,7 +215,7 @@ namespace wincalc {
 			// 
 			this->button10->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button10->Location = System::Drawing::Point(144, 64);
+			this->button10->Location = System::Drawing::Point(144, 79);
 			this->button10->Name = L"button10";
 			this->button10->Size = System::Drawing::Size(60, 40);
 			this->button10->TabIndex = 9;
@@ -213,7 +227,7 @@ namespace wincalc {
 			// 
 			this->button11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button11->Location = System::Drawing::Point(12, 202);
+			this->button11->Location = System::Drawing::Point(12, 217);
 			this->button11->Name = L"button11";
 			this->button11->Size = System::Drawing::Size(60, 40);
 			this->button11->TabIndex = 10;
@@ -225,7 +239,7 @@ namespace wincalc {
 			// 
 			this->button12->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button12->Location = System::Drawing::Point(144, 202);
+			this->button12->Location = System::Drawing::Point(144, 217);
 			this->button12->Name = L"button12";
 			this->button12->Size = System::Drawing::Size(60, 40);
 			this->button12->TabIndex = 11;
@@ -237,7 +251,7 @@ namespace wincalc {
 			// 
 			this->button13->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button13->Location = System::Drawing::Point(210, 202);
+			this->button13->Location = System::Drawing::Point(210, 217);
 			this->button13->Name = L"button13";
 			this->button13->Size = System::Drawing::Size(60, 40);
 			this->button13->TabIndex = 12;
@@ -249,7 +263,7 @@ namespace wincalc {
 			// 
 			this->button14->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button14->Location = System::Drawing::Point(210, 156);
+			this->button14->Location = System::Drawing::Point(210, 171);
 			this->button14->Name = L"button14";
 			this->button14->Size = System::Drawing::Size(60, 40);
 			this->button14->TabIndex = 13;
@@ -261,7 +275,7 @@ namespace wincalc {
 			// 
 			this->button15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button15->Location = System::Drawing::Point(210, 110);
+			this->button15->Location = System::Drawing::Point(210, 125);
 			this->button15->Name = L"button15";
 			this->button15->Size = System::Drawing::Size(60, 40);
 			this->button15->TabIndex = 14;
@@ -273,7 +287,7 @@ namespace wincalc {
 			// 
 			this->button16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button16->Location = System::Drawing::Point(210, 64);
+			this->button16->Location = System::Drawing::Point(210, 79);
 			this->button16->Name = L"button16";
 			this->button16->Size = System::Drawing::Size(60, 40);
 			this->button16->TabIndex = 15;
@@ -283,7 +297,7 @@ namespace wincalc {
 			// 
 			// textBox1
 			// 
-			this->textBox1->Location = System::Drawing::Point(12, 38);
+			this->textBox1->Location = System::Drawing::Point(12, 53);
 			this->textBox1->Name = L"textBox1";
 			this->textBox1->ReadOnly = true;
 			this->textBox1->Size = System::Drawing::Size(258, 20);
@@ -292,7 +306,7 @@ namespace wincalc {
 			// 
 			// textBox2
 			// 
-			this->textBox2->Location = System::Drawing::Point(12, 12);
+			this->textBox2->Location = System::Drawing::Point(12, 27);
 			this->textBox2->Name = L"textBox2";
 			this->textBox2->ReadOnly = true;
 			this->textBox2->Size = System::Drawing::Size(258, 20);
@@ -302,7 +316,7 @@ namespace wincalc {
 			// 
 			this->button17->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 15.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(0)));
-			this->button17->Location = System::Drawing::Point(12, 248);
+			this->button17->Location = System::Drawing::Point(12, 263);
 			this->button17->Name = L"button17";
 			this->button17->Size = System::Drawing::Size(258, 40);
 			this->button17->TabIndex = 18;
@@ -310,11 +324,59 @@ namespace wincalc {
 			this->button17->UseVisualStyleBackColor = true;
 			this->button17->Click += gcnew System::EventHandler(this, &MyForm::button17_Click);
 			// 
+			// menuStrip1
+			// 
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->saveToFileToolStripMenuItem });
+			this->menuStrip1->Location = System::Drawing::Point(0, 0);
+			this->menuStrip1->Name = L"menuStrip1";
+			this->menuStrip1->Size = System::Drawing::Size(283, 24);
+			this->menuStrip1->TabIndex = 19;
+			this->menuStrip1->Text = L"menuStrip1";
+			// 
+			// saveToFileToolStripMenuItem
+			// 
+			this->saveToFileToolStripMenuItem->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->saveToFileToolStripMenuItem1 });
+			this->saveToFileToolStripMenuItem->Name = L"saveToFileToolStripMenuItem";
+			this->saveToFileToolStripMenuItem->Size = System::Drawing::Size(61, 20);
+			this->saveToFileToolStripMenuItem->Text = L"Options";
+			this->saveToFileToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::saveToFileToolStripMenuItem_Click);
+			// 
+			// saveToFileToolStripMenuItem1
+			// 
+			this->saveToFileToolStripMenuItem1->DropDownItems->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
+				this->enabledToolStripMenuItem,
+					this->overwriteToolStripMenuItem, this->locationToolStripMenuItem
+			});
+			this->saveToFileToolStripMenuItem1->Name = L"saveToFileToolStripMenuItem1";
+			this->saveToFileToolStripMenuItem1->Size = System::Drawing::Size(134, 22);
+			this->saveToFileToolStripMenuItem1->Text = L"Save To File";
+			// 
+			// enabledToolStripMenuItem
+			// 
+			this->enabledToolStripMenuItem->CheckOnClick = true;
+			this->enabledToolStripMenuItem->Name = L"enabledToolStripMenuItem";
+			this->enabledToolStripMenuItem->Size = System::Drawing::Size(125, 22);
+			this->enabledToolStripMenuItem->Text = L"Enabled";
+			// 
+			// overwriteToolStripMenuItem
+			// 
+			this->overwriteToolStripMenuItem->CheckOnClick = true;
+			this->overwriteToolStripMenuItem->Name = L"overwriteToolStripMenuItem";
+			this->overwriteToolStripMenuItem->Size = System::Drawing::Size(125, 22);
+			this->overwriteToolStripMenuItem->Text = L"Overwrite";
+			// 
+			// locationToolStripMenuItem
+			// 
+			this->locationToolStripMenuItem->Name = L"locationToolStripMenuItem";
+			this->locationToolStripMenuItem->Size = System::Drawing::Size(125, 22);
+			this->locationToolStripMenuItem->Text = L"Location";
+			this->locationToolStripMenuItem->Click += gcnew System::EventHandler(this, &MyForm::locationToolStripMenuItem_Click_1);
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(284, 299);
+			this->ClientSize = System::Drawing::Size(283, 314);
 			this->Controls->Add(this->button17);
 			this->Controls->Add(this->textBox2);
 			this->Controls->Add(this->textBox1);
@@ -334,10 +396,15 @@ namespace wincalc {
 			this->Controls->Add(this->button3);
 			this->Controls->Add(this->button2);
 			this->Controls->Add(this->button1);
+			this->Controls->Add(this->menuStrip1);
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
 			this->Name = L"MyForm";
 			this->Text = L"WinCalc";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			this->menuStrip1->ResumeLayout(false);
+			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -451,6 +518,28 @@ private: System::Void button17_Click(System::Object^ sender, System::EventArgs^ 
 	textBox2->AppendText(" = ");
 	textBox1->Text = System::Convert::ToString(sum);
 	textBox2->AppendText(System::Convert::ToString(sum));
+}
+private: System::Void saveToFileToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void locationToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void locationToolStripMenuItem_Click_1(System::Object^ sender, System::EventArgs^ e) {
+	System::IO::Stream^ myStream;
+	OpenFileDialog^ openFileDialog1 = gcnew OpenFileDialog;
+
+	openFileDialog1->InitialDirectory = "c:\\";
+	openFileDialog1->Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+	openFileDialog1->FilterIndex = 2;
+	openFileDialog1->RestoreDirectory = true;
+
+	if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)
+	{
+		if ((myStream = openFileDialog1->OpenFile()) != nullptr)
+		{
+			//TODO: saving stream path to variable
+			myStream->Close();
+		}
+	}
 }
 };
 }
