@@ -1,3 +1,0 @@
-C:\Users\filip\source\repos\wincalc\wincalc\Debug\wincalc.vcxprojAssemblyReference.cache
-C:\Users\filip\source\repos\wincalc\wincalc\Debug\wincalc.MyForm.resources
-C:\Users\filip\source\repos\wincalc\wincalc\Debug\wincalc.vcxproj.GenerateResource.cache

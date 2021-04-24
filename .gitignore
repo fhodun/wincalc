@@ -492,3 +492,9 @@ $RECYCLE.BIN/
 *.app
 
 # End of https://www.toptal.com/developers/gitignore/api/c++
+
+# My own ignores
+*/Release/*
+Release/*
+*/Debug/*
+Debug/*
