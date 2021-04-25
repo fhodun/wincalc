@@ -1,3 +1,3 @@
 # wincalc
 
-Calculator application written in C++ using WinForms :(
+Calculator written in C++ using WinForms framework :(
